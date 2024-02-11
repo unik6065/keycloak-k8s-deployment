@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: keycloak
+spec:
+  tls:
+    - hosts:
+        - env-7920523.jcloud.ik-server.com
+  rules:
+    - host: env-7920523.jcloud.ik-server.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: keycloak
+                port:
+                  number: 8080
