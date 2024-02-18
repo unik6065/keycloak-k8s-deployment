@@ -3,9 +3,7 @@ kind: Ingress
 metadata:
   name: keycloak
 spec:
-  tls:
-    - hosts:
-        - env-7920523.jcloud.ik-server.com
+  ipFamilyPolicy: dual-stack
   rules:
     - host: env-7920523.jcloud.ik-server.com
       http:
