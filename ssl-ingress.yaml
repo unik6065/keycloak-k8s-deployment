@@ -4,7 +4,7 @@ metadata:
   name: cargo-tracker-worker
   namespace: default
   annotations:
-    kubernetes.io/ingress.class: nginx-cert
+    ingressClassName: nginx-cert
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
     kubernetes.io/tls-acme: "true"
     nginx.ingress.kubernetes.io/affinity: "cookie"
